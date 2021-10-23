@@ -93,7 +93,7 @@ client.on('message', msg => {
 		   { name: '!nitro  ', value: 'Gen 25 Nitro To Your Dm' },
 		   { name: '!invitenitro  ', value: 'Invite Nitro Bot V3 To Your Server',},
            { name: '!chancesnitro - ', value: 'See The Chances Of Nitro' },
-           { name: 'Nitro Bot Made By : ', value: 'MashedPotato And PVP89Y8' },
+           { name: 'Nitro Bot Made By : ', value: 'MashedPotato#0001' },
 	    )
 	   .setTimestamp()
 
