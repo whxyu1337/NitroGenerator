@@ -1,5 +1,5 @@
 # nitrobotv3
-A NitroGen created by PVP89Y8#5536 and MashedPotato#3550
+A NitroGen created by 𝕄𝗮𝘀𝗵𝗲𝗱𝗣𝗼𝘁𝗮𝘁𝗼#0001
 Step 1 :You need to install node.js
 Step 2 :Go to nitrov3 folder using cd command (If you don't know what to do,just do like me: +extract the nitro gen v3 folder to your Desktop,then open node.js and then type cd Desktop then type this another command : cd nitrobotgen v3)
 
