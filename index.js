@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const keepAlive = require('./server');
 const randomstring = require("randomstring");
 
-const prefix = '!';
+const prefix = 'n!';
 const amountnitro = 0;
 
 client.on('message', msg => {
@@ -13,7 +14,7 @@ client.on('message', msg => {
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('#8A2BE2')
 	    .setTitle('-------- Nitro Send --------')
-	    .setURL('https://discord.js.org/')
+	    .setURL('https://discord.gg/5u6wA732X3')
 	    .addFields(
 		   { name: 'Dm Message  ', value: 'I Sent You a 25 Nitro Check Your DMs :thumbsup: (Note: The Nitro Codes Are Not Checked)' },
 	    )
@@ -48,46 +49,45 @@ client.on('message', msg => {
     }
     
 
-    if (msg.content.startsWith(`${prefix}invitenitro`)) {
-        if (!msg.guild.member(client.user).hasPermission(["ADMINISTRATOR"])) return;
+    if (msg.content.startsWith(`${prefix}invite`)) {
+        if (!msg.guild.member(client.user).hasPermission(["SEND_MESSAGES"])) return;
         msg.delete()
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('#8A2BE2')
 	    .setTitle('-------- Invite Nitro Bot V3 --------')
-	    .setURL('https://discord.js.org/')
+	    .setURL('https://discord.gg/5u6wA732X3')
 	    .addFields(
-		   { name: 'Link To Add Your Bot To Your Server - ', value: 'Link: https://discord.com/api/oauth2/authorize?client_id=892933858146795610&permissions=8&scope=bot' },
-           { name: 'Note : ', value: 'Make Nitro Bot V3 As Administrator Or It Will Not Work' },
+		   { name: 'Link To Add Your Bot To Your Server - ', value: 'Link: https://discord.com/api/oauth2/authorize?client_id=902881696502935603&permissions=8&scope=bot' },
+           { name: 'Note : ', value: 'Make Nitro Bot V3 As SEND_MESSAGES Or It Will Not Work' },
 	    )
 	   .setTimestamp()
 
         msg.channel.send(exampleEmbed);
     }
 
-
-    if (msg.content.startsWith(`${prefix}chancesnitro`)) {
-        if (!msg.guild.member(client.user).hasPermission(["ADMINISTRATOR"])) return;
+    if (msg.content.startsWith(`${prefix}chances`)) {
+        if (!msg.guild.member(client.user).hasPermission(["SEND_MESSAGES"])) return;
         msg.delete()
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('#8A2BE2')
 	    .setTitle('-------- Nitro Chances --------')
-	    .setURL('https://discord.js.org/')
+	    .setURL('https://discord.gg/5u6wA732X3')
 	    .addFields(
 		   { name: 'Nitro Classic : ', value: '0.1%' },
-		   { name: 'Nitro : ', value: '0.00000001%' },
+		   { name: 'Nitro : ', value: '0.0000001%' },
 	    )
 	   .setTimestamp()
 
         msg.channel.send(exampleEmbed);
     }
 
-    if (msg.content.startsWith(`${prefix}helpnitro`)) {
-        if (!msg.guild.member(client.user).hasPermission(["ADMINISTRATOR"])) return;
+if (msg.content.startsWith(`${prefix}help`)) {
+        if (!msg.guild.member(client.user).hasPermission(["SEND_MESSAGES"])) return;
         msg.delete()
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('#8A2BE2')
 	    .setTitle('-------- Nitro Bot V3 Help --------')
-	    .setURL('https://discord.js.org/')
+	    .setURL('https://discord.gg/5u6wA732X3')
 	    .addFields(
 		   { name: '!helpnitro  ', value: 'Help Nitro Commands' },
 		   { name: '!nitro  ', value: 'Gen 25 Nitro To Your Dm' },
@@ -105,17 +105,18 @@ client.on('ready', async () => {
     console.log('Nitro Bot V3 Is Online!')
 
     let statuses = [
-        `Free Nitro`,
-        `${client.users.cache.size} Miners👀`
+        `NitroGen`,
+        `dsc.gg/nitrogenerator`
     ]
 
     setInterval(function () {
         let status = statuses[Math.floor(Math.random() * statuses.length)];
         client.user.setActivity(status, {
-            type: "STREAMING",
-            url: "https://www.twitch.tv/"
+            type: "CUSTOM_STATUS",
+            url: "to n!help"
         })
     }, 4000)
 })
 
-client.login('EnterTokenHere')
+keepAlive();
+client.login(process.env.TOKEN || token )
