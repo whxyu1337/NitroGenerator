@@ -13,7 +13,7 @@ client.on('message', msg => {
         msg.delete()
         const exampleEmbed = new Discord.MessageEmbed()
 	    .setColor('#8A2BE2')
-	    .setTitle('-------- Nitro Send --------')
+	    .setTitle('-------- Nitro Sent --------')
 	    .setURL('https://discord.gg/5u6wA732X3')
 	    .addFields(
 		   { name: 'Dm Message  ', value: 'I Sent You a 25 Nitro Check Your DMs :thumbsup: (Note: The Nitro Codes Are Not Checked)' },
@@ -93,7 +93,7 @@ if (msg.content.startsWith(`${prefix}help`)) {
 		   { name: '!nitro  ', value: 'Gen 25 Nitro To Your Dm' },
 		   { name: '!invitenitro  ', value: 'Invite Nitro Bot V3 To Your Server',},
            { name: '!chancesnitro - ', value: 'See The Chances Of Nitro' },
-           { name: 'Nitro Bot Made By : ', value: 'MashedPotato#0001' },
+           { name: 'Nitro Bot Made By : ', value: 'Mxnty#0001' },
 	    )
 	   .setTimestamp()
 
