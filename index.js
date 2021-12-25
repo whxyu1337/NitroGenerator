@@ -119,4 +119,4 @@ client.on('ready', async () => {
 })
 
 keepAlive();
-client.login(process.env.TOKEN || token )
+client.login(process.env.TOKEN)
