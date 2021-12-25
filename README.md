@@ -1,4 +1,4 @@
-#NitroGenerator
+# NitroGenerator
 Discord Bot that tries Discord Nitro gift codes if exists. Feel free to contribute this project.
 
 ***[!]*** However **it is very very very low (impossible) chance** to get a working *Nitro gift* due to **randomized 24 digit code.**
